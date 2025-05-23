@@ -6,8 +6,8 @@
 5. Fill out as followed:
 
 Name: Bing (or whatever you want to call it but bing is better)
-Shortcut: https://inkboym.github.io/bingunblocked or https://github.com/NotMadEggOffical/BingUnblocked if your school blocked/ip blocked InkBoyM links
-URL with %s in place of query: https://inkboym.github.io/bingunblocked?q=%s or https://github.com/NotMadEggOffical/BingUnblocked?q=%s if your school blocked/ip blocked InkBoyM links
+Shortcut: https://inkboym.github.io/bingunblocked or https://notmadeggoffical.github.io/BingUnblocked/ if your school blocked/ip blocked InkBoyM links
+URL with %s in place of query: https://inkboym.github.io/bingunblocked?q=%s or https://notmadeggoffical.github.io/BingUnblocked?q=%s if your school blocked/ip blocked InkBoyM links
 
 
 6. Click add
