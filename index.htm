@@ -22,17 +22,18 @@
 </head>
 <body>
   <script>
-    const path = window.location.pathname.slice(1); // Get "something" from /something
-    const query = encodeURIComponent(path || '');   // Encode for URL
-    const bingURL = `https://www.bing.com/search?q=${query}`;
+    // Parse URLSearchParams for the 'q' parameter
+    const params = new URLSearchParams(window.location.search);
+    const query = params.get('q');
     
     if (query) {
+      const bingURL = `https://www.bing.com/search?q=${encodeURIComponent(query)}`;
       const embed = document.createElement('embed');
       embed.src = bingURL;
       embed.type = "text/html";
       document.body.appendChild(embed);
     } else {
-      document.body.innerHTML = "<h1 style='text-align:center;margin-top:20%;'>If you see this do /yoursearch to start searching!</h1>";
+      document.body.innerHTML = "<h1 style='text-align:center;margin-top:20%;'>No search query specified. Use ?q=your+term</h1>";
     }
   </script>
 </body>
