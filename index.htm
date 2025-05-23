@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Bing Search Embed</title>
+  <title>Search</title> 
   <link rel="icon" href="https://www.bing.com/sa/simg/favicon-trans-bg-blue-mg.ico" type="image/x-icon" />
   <style>
     html, body {
@@ -22,18 +22,19 @@
 </head>
 <body>
   <script>
-    // Parse URLSearchParams for the 'q' parameter
     const params = new URLSearchParams(window.location.search);
     const query = params.get('q');
-    
+
     if (query) {
+      document.title = `${query} - Search`; 
       const bingURL = `https://www.bing.com/search?q=${encodeURIComponent(query)}`;
       const embed = document.createElement('embed');
       embed.src = bingURL;
       embed.type = "text/html";
       document.body.appendChild(embed);
     } else {
-      document.body.innerHTML = "<h1 style='text-align:center;margin-top:20%;'>If you see this message, do ?q=whatever in the url bar</h1>";
+      document.title = "No Search Query";
+      document.body.innerHTML = "<h1 style='text-align:center;margin-top:20%;'>No search query specified. Use ?q=your+term</h1>";
     }
   </script>
 </body>
